@@ -30,6 +30,9 @@ This project is inspired through the covid-19's work environment the WFH setup a
 - Update documentation
 - Report bugs
 
+## Contributors
+- Terrence Calzada
+
 ## Donation
 - Buy us a coffee, we accept donation only in:
 	- Paypal: info.pyritecrew@gmail.com.

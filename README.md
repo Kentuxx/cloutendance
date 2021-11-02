@@ -32,6 +32,7 @@ This project is inspired through the covid-19's work environment the WFH setup a
 
 ## Contributors
 - Terrence Calzada
+- Kenth Cadayday
 
 ## Donation
 - Buy us a coffee, we accept donation only in:

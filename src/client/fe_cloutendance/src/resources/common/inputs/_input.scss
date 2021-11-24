@@ -1,6 +1,12 @@
 /// Code for input
 /// ...
-
+.input-common {
+    padding: 10px 15px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px #ccc solid;
+}
 
 /// Code for textarea
 /// ...

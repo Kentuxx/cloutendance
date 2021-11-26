@@ -1,11 +1,19 @@
-import React from 'react'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginCommon from "./common/auth/log_in";
+import User from "./common/auth/user";
 
 const App = () => {
-    return (
-        <React.Fragment>
-            <h1>Welcome to Cloutendance</h1>
-        </React.Fragment>
-    )
-}
+  return (
+    <React.Fragment>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<LoginCommon />} />
+          <Route exact path="/user" element={<User />} />
+        </Routes>
+      </BrowserRouter>
+    </React.Fragment>
+  );
+};
 
-export default App
+export default App;

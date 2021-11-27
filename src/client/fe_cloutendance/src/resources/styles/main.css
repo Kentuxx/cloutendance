@@ -198,6 +198,8 @@ label {
 }
 
 .error-response {
+  -webkit-animation: easeIn 0.8s;
+          animation: easeIn 0.8s;
   z-index: 300;
   position: fixed;
   bottom: 20px;
@@ -210,6 +212,8 @@ label {
 }
 
 .success-response {
+  -webkit-animation: easeIn 0.8s;
+          animation: easeIn 0.8s;
   z-index: 400;
   position: fixed;
   bottom: 20px;
@@ -234,6 +238,24 @@ label {
 
 .header-response {
   margin-bottom: 5px;
+}
+
+@-webkit-keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .login-container {
@@ -267,14 +289,17 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.login-container .date-time-container .date p {
+.login-container .date-time-container .date {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 32px;
 }
 
-.login-container .date-time-container .time p {
+.login-container .date-time-container .time {
   font-weight: bold;
   font-size: 52px;
 }

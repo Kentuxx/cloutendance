@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { InputCommon } from "../inputs/input.common";
@@ -11,7 +11,7 @@ import useResponseHelper from "../../../helpers/custom_hooks/use_response.helper
 
 const LoginCommon = () => {
   // =========================================
-  // CUSTOM HOOKSE
+  // CUSTOM HOOKS
   // =========================================
   let { renderFail, renderSucceed } = useResponseHelper();
   // =========================================
@@ -97,13 +97,8 @@ const LoginCommon = () => {
     <div className="login-container">
       {/* DATE AND TIME DISPLAY STARTS HERE */}
       <div className="date-time-container">
-        <div className="date">
-          <p> {dateState} </p>
-        </div>
-
-        <div className="time">
-          <p> {timeState} </p>
-        </div>
+        <p className="date"> {dateState} </p>
+        <p className="time"> {timeState} </p>
       </div>
 
       {/* FORM DISPLAY STARTS HERE */}

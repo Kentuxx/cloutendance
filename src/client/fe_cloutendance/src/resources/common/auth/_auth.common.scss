@@ -10,18 +10,15 @@
     padding: 10px 0px;
     @include displayFlex(false);
     align-items: center;
+    justify-content: center;
 
     .date {
-      p {
-        font-weight: bold;
-        font-size: 30px;
-      }
+      font-weight: bold;
+      font-size: 32px;
     }
     .time {
-      p {
-        font-weight: bold;
-        font-size: 52px;
-      }
+      font-weight: bold;
+      font-size: 52px;
     }
   }
 

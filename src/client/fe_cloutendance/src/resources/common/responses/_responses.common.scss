@@ -99,6 +99,7 @@
 
 // ERROR RESPONSE STARTS HERE
 .error-response {
+  animation: easeIn 0.8s;
   z-index: map-get($zindexPopups, error-popup);
   position: fixed;
   bottom: 20px;
@@ -111,6 +112,7 @@
 }
 // SUCCESS RESPONSE
 .success-response {
+  animation: easeIn 0.8s;
   z-index: map-get($zindexPopups, success-popup);
   position: fixed;
   bottom: 20px;
@@ -134,4 +136,13 @@
 
 .header-response {
   margin-bottom: 5px;
+}
+
+@keyframes easeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

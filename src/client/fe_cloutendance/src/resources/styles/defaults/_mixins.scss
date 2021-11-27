@@ -1,1 +1,17 @@
 /// MIXINS
+@mixin displayFlex($row) {
+  display: flex;
+  @if $row {
+    flex-direction: row;
+  } @else {
+    flex-direction: column;
+  }
+}
+
+@mixin displayShadow {
+  box-shadow: 0px 0px 70px map-get($primaryColor, value-200);
+}
+
+@mixin displayBgBlur {
+  backdrop-filter: blur(6px);
+}

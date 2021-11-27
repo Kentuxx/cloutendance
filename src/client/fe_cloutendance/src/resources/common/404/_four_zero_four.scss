@@ -1,0 +1,8 @@
+.four-zero-four-container {
+  margin: auto;
+  max-width: 500px;
+  @include displayFlex(true);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}

@@ -27,8 +27,8 @@ exports.loginUser = async (request, response, next) => {
   AuthService.authenticate(request.body)
     .then((res) => {
       response.cookie("key", res.token, {
+        maxAge: 1000 * AGE_OF_TOKEN,
         httpOnly: true,
-        maxAge: AGE_OF_TOKEN * 1000,
       });
       response.status(200).json({ token: res.token });
     })

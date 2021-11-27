@@ -1,16 +1,20 @@
 /// Code for input
 /// ...
 .input-common {
-    padding: 10px 15px;
-    box-sizing: border-box;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px #ccc solid;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px map-get($primaryColor, value-200) solid;
+  margin-top: 5px;
 }
 
 /// Code for textarea
 /// ...
 
-
 /// Code for select
 /// ...
+
+::placeholder {
+  color: map-get($primaryColor, value-200);
+}

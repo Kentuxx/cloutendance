@@ -1,1 +1,21 @@
 /// THEME COLORS HERE
+$primaryColor: (
+  value: #000,
+  value-800: rgba(0, 0, 0, 0.8),
+  value-600: rgba(0, 0, 0, 0.6),
+  value-400: rgba(0, 0, 0, 0.4),
+  value-200: rgba(0, 0, 0, 0.2),
+);
+
+$secondaryColor: (
+  value: #fff,
+  value-800: rgba(255, 255, 255, 0.8),
+  value-600: rgba(255, 255, 255, 0.6),
+  value-400: rgba(255, 255, 255, 0.4),
+  value-200: rgba(255, 255, 255, 0.2),
+);
+
+$responseColor: (
+  success: #5cb85c,
+  fail: #f44336,
+);

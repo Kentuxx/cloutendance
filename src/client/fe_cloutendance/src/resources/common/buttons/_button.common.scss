@@ -1,0 +1,12 @@
+.button-common-style {
+  padding: 15px 20px;
+  width: 100%;
+  color: map-get($secondaryColor, value);
+  background-color: map-get($primaryColor, value);
+  border: none;
+  border-radius: 5px;
+}
+
+.button-common-style:hover {
+  background-color: map-get($primaryColor, value-800);
+}

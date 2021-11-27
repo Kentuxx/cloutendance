@@ -1,5 +1,43 @@
-/// CODE FOR THE WHOLE PAGE/APP.JS
+/// CODE GLOBAL DISPLAY
+@import "./defaults/colors";
+@import "./defaults/others";
+@import "./defaults/mixins";
 
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Source Sans Pro", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 24px;
+}
+
+label {
+  color: map-get($primaryColor, value-800);
+}
+
+.input-validation-style {
+  color: map-get($responseColor, fail);
+  font-size: 15px;
+}
 
 /// IMPORT HERE
 @import "../common/common";

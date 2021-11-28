@@ -1,6 +1,7 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router";
+import { useState, useEffect } from "react/cjs/react.development";
 import useResponseHelper from "../../../helpers/custom_hooks/use_response.helper";
 import { useGlobalContext } from "../../../providers/global_provider/global.context";
 import { GLOBAL_ACTION_TYPE } from "../../../providers/global_provider/global.reducer";

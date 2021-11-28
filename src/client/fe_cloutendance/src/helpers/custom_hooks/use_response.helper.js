@@ -1,18 +1,19 @@
+import { useRef } from "react";
 import { useGlobalContext } from "../../providers/global_provider/global.context";
 import { GLOBAL_ACTION_TYPE } from "../../providers/global_provider/global.reducer";
 
 const useResponseHelper = () => {
   let { globalDispatch } = useGlobalContext();
-  let timeoutFail = 0,
-    timeoutSuccess = 0;
+  const timeoutFail = useRef(null);
+  const timeoutSuccess = useRef(null);
 
   const renderFail = () => {
-    renderCancel();
+    renderTimeoutCancel();
     globalDispatch({
       type: GLOBAL_ACTION_TYPE.setError,
       payload: { isError: true },
     });
-    timeoutFail = setTimeout(() => {
+    timeoutFail.current = setTimeout(() => {
       globalDispatch({
         type: GLOBAL_ACTION_TYPE.setError,
         payload: { isError: false },
@@ -21,12 +22,12 @@ const useResponseHelper = () => {
   };
 
   const renderSucceed = () => {
-    renderCancel();
+    renderTimeoutCancel();
     globalDispatch({
       type: GLOBAL_ACTION_TYPE.setSuccess,
       payload: { isSuccess: true },
     });
-    timeoutSuccess = setTimeout(() => {
+    timeoutSuccess.current = setTimeout(() => {
       globalDispatch({
         type: GLOBAL_ACTION_TYPE.setSuccess,
         payload: { isSuccess: false },
@@ -34,11 +35,9 @@ const useResponseHelper = () => {
     }, 5000);
   };
 
-  const renderCancel = () => {
-    clearTimeout(timeoutFail);
-    clearTimeout(timeoutSuccess);
-    timeoutFail = 0;
-    timeoutSuccess = 0;
+  const renderTimeoutCancel = () => {
+    clearTimeout(timeoutFail.current);
+    clearTimeout(timeoutSuccess.current);
 
     globalDispatch({
       type: GLOBAL_ACTION_TYPE.setSuccess,
